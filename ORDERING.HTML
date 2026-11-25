@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Schedule a Legion Laundry pickup and view your saved bookings.">
+  <link rel="stylesheet" href="styles.css">
+  <script src="booking.js" defer></script>
+  <title>Book a pickup | Legions Laundry</title>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="HOME-PAGE.HTML" aria-label="Legion Laundry home"><span class="brand-mark" aria-hidden="true">LL</span><span>Legions <span class="brand-light">Laundry</span></span></a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="HOME-PAGE.HTML">Home</a></li>
+          <li><a class="nav-link" href="ABOUT.HTML">About us</a></li>
+          <li><a class="nav-link" href="SERVICES.HTML">Services &amp; pricing</a></li>
+          <li><a class="nav-link current" href="ORDERING.HTML" aria-current="page">Book a pickup</a></li>
+          <li><a class="nav-link" href="CONTACTS.HTML">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="button button-small" href="CONTACTS.HTML">Contact us <span aria-hidden="true">&#8599;</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-intro">
+      <span class="eyebrow"><span class="status-dot"></span> Book when it works for you</span>
+      <h1>Schedule a laundry pickup.</h1>
+      <p>Enter your contact details, service, and preferred pickup time. Your bookings are saved in this browser so you can return to this page later to review them.</p>
+    </section>
+
+    <div class="booking-layout">
+      <section class="booking-panel" aria-labelledby="booking-form-title">
+        <h2 id="booking-form-title">Your booking details</h2>
+        <p class="form-note">All fields marked required must be filled out. Prices and garment weights are estimates; see <a href="SERVICES.HTML">services and pricing</a>.</p>
+        <form class="booking-form" id="booking-form">
+          <div class="form-field">
+            <label for="customer-name">Full name *</label>
+            <input id="customer-name" name="customerName" type="text" autocomplete="name" required maxlength="100">
+          </div>
+          <div class="form-field">
+            <label for="customer-phone">Phone number *</label>
+            <input id="customer-phone" name="phone" type="tel" autocomplete="tel" required maxlength="30">
+          </div>
+          <div class="form-field form-field-full">
+            <label for="customer-email">Email address</label>
+            <input id="customer-email" name="email" type="email" autocomplete="email" maxlength="150">
+          </div>
+          <div class="form-field form-field-full">
+            <label for="pickup-address">Pickup address *</label>
+            <input id="pickup-address" name="address" type="text" autocomplete="street-address" required maxlength="200">
+          </div>
+          <div class="form-field">
+            <label for="service-type">Laundry service *</label>
+            <select id="service-type" name="service" required>
+              <option value="">Choose a service</option>
+              <option value="Wash and fold">Wash and fold</option>
+              <option value="Wash and iron">Wash and iron</option>
+              <option value="Ironing only">Ironing only</option>
+              <option value="Dry cleaning">Dry cleaning</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="estimated-weight">Estimated laundry weight *</label>
+            <select id="estimated-weight" name="weight" required>
+              <option value="">Choose a weight</option>
+              <option value="Up to 3 kg">Up to 3 kg</option>
+              <option value="3-5 kg">3-5 kg</option>
+              <option value="5-10 kg">5-10 kg</option>
+              <option value="More than 10 kg">More than 10 kg</option>
+              <option value="Not sure">Not sure</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="pickup-date">Preferred pickup date *</label>
+            <input id="pickup-date" name="date" type="date" required>
+          </div>
+          <div class="form-field">
+            <label for="pickup-time">Preferred pickup time *</label>
+            <select id="pickup-time" name="time" required>
+              <option value="">Choose a time</option>
+              <option value="8:00 AM - 10:00 AM">8:00 AM - 10:00 AM</option>
+              <option value="10:00 AM - 12:00 PM">10:00 AM - 12:00 PM</option>
+              <option value="12:00 PM - 2:00 PM">12:00 PM - 2:00 PM</option>
+              <option value="2:00 PM - 4:00 PM">2:00 PM - 4:00 PM</option>
+              <option value="4:00 PM - 6:00 PM">4:00 PM - 6:00 PM</option>
+            </select>
+          </div>
+          <div class="form-field form-field-full">
+            <label for="booking-notes">Garment types or care notes</label>
+            <textarea id="booking-notes" name="notes" maxlength="500" placeholder="For example: shirts, trousers, or delicate items"></textarea>
+            <small>Optional. Maximum 500 characters.</small>
+          </div>
+          <div class="form-actions">
+            <button class="button" type="submit">Save booking</button>
+            <button class="button button-secondary" type="reset">Clear form</button>
+          </div>
+        </form>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </section>
+
+      <section class="booking-panel" aria-labelledby="saved-bookings-title">
+        <h2 id="saved-bookings-title">Your saved bookings</h2>
+        <p class="form-note">Bookings saved on this browser will appear here, including when you return later.</p>
+        <div class="booking-list" id="booking-list" aria-live="polite">
+          <p class="booking-empty">Your bookings will appear here after you save one.</p>
+        </div>
+      </section>
+    </div>
+
+    <p class="booking-warning"><strong>Important:</strong> Bookings are stored only in this browser on this device. This is a front-end demo and does not send an order to the business or sync bookings to another device. Please call <a href="tel:0704766127">0704 766 127</a> to confirm your pickup.</p>
+
+    <nav class="page-navigation" aria-label="Page navigation">
+      <a class="button button-secondary" href="SERVICES.HTML"><span aria-hidden="true">&#8592;</span> Back: Services</a>
+      <a class="button" href="CONTACTS.HTML">Next: Contact <span aria-hidden="true">&#8594;</span></a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand" href="HOME-PAGE.HTML"><span class="brand-mark" aria-hidden="true">LL</span><span>Legions <span class="brand-light">Laundry</span></span></a>
+    <p>Good care, delivered.</p>
+    <address class="footer-contact"><a href="tel:0704766127">Call 0704 766 127</a><a href="CONTACTS.HTML">Contact us</a></address>
+    <a href="SERVICES.HTML">View services</a>
+  </footer>
+</body>
+</html>

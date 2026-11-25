@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meet the people and values behind Legion Laundry.">
+  <link rel="stylesheet" href="styles.css">
+  <title>About us | Legion Laundry</title>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="HOME-PAGE.HTML" aria-label="Legion Laundry home"><span class="brand-mark" aria-hidden="true">LL</span><span>Legion <span class="brand-light">Laundry</span></span></a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="HOME-PAGE.HTML">Home</a></li>
+          <li><a class="nav-link current" href="ABOUT.HTML" aria-current="page">About us</a></li>
+          <li><a class="nav-link" href="SERVICES.HTML">Services &amp; pricing</a></li>
+          <li><a class="nav-link" href="ORDERING.HTML">Book a pickup</a></li>
+          <li><a class="nav-link" href="CONTACTS.HTML">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="button button-small" href="ORDERING.HTML">Schedule pickup <span aria-hidden="true">&#8599;</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="status-dot"></span> A little more room in your week</span>
+        <h1>Meet <span>Legion Laundry.</span></h1>
+        <p class="hero-description">We make laundry feel lighter. Our team brings thoughtful garment care and convenient pickup together, so you can spend less time on chores and more time on what matters.</p>
+        <div class="hero-actions">
+          <a class="button" href="SERVICES.HTML">See services and prices <span aria-hidden="true">&#8594;</span></a>
+          <a class="text-link" href="ORDERING.HTML">Book a pickup <span aria-hidden="true">&#8594;</span></a>
+        </div>
+        <div class="hero-note"><span class="note-rule"></span><span>Careful with your clothes. Considerate with your time.</span></div>
+      </div>
+      <div class="hero-visual">
+        <div class="image-frame"><img src="laudry pic 4.jpg" alt="Modern laundry machines in a clean facility"></div>
+        <div class="turnaround"><span class="turnaround-icon" aria-hidden="true">LL</span><span><strong>Care in every cycle</strong><small>Thoughtful from pickup to fold</small></span></div>
+        <span class="visual-caption">Laundry care, made more convenient.</span>
+      </div>
+    </section>
+
+    <section class="benefits" aria-labelledby="values-title">
+      <div class="section-heading">
+        <div><span class="section-kicker">What matters to us</span><h2 id="values-title">Good care, at every step.</h2></div>
+        <p>A simpler laundry routine should still feel personal.</p>
+      </div>
+      <div class="benefit-grid">
+        <article class="benefit"><span class="benefit-number">01 / CARE</span><h3>Clothes treated with care</h3><p>We take a considered approach to everyday laundry, with attention to the fabrics and details that matter to you.</p></article>
+        <article class="benefit"><span class="benefit-number">02 / EASE</span><h3>Convenience that fits</h3><p>Pickup and delivery help take a recurring chore off your list and make room for the rest of your day.</p></article>
+        <article class="benefit"><span class="benefit-number">03 / CLARITY</span><h3>A straightforward experience</h3><p>From choosing a service to arranging collection, we aim to keep each step simple and clear.</p></article>
+      </div>
+    </section>
+
+    <section class="content-section" aria-labelledby="team-title">
+      <div class="section-heading">
+        <div><span class="section-kicker">Meet the people behind the care</span><h2 id="team-title">Our team.</h2></div>
+        <p>Replace each photo placeholder with a team member’s portrait and update their name and role.</p>
+      </div>
+      <div class="team-grid">
+        <article class="team-card">
+          <div class="team-photo-placeholder" role="img" aria-label="Profile photo placeholder for team member one"><img src="profiles/kelvin.jpg" alt=""></div>
+          <h3>KELVIN MURITHI</h3> <H4>Dirrector</H4>
+        </article>
+        <article class="team-card">
+          <div class="team-photo-placeholder" role="img" aria-label="Profile photo placeholder for team member two"><img src="profiles/martinet.jpg" alt="" class="profile-photo-placeholder"></div>
+          <h3>MARTINET NJUGUNA</h3><h4>Assistant chairman</p>
+        </article>
+        <article class="team-card">
+          <div class="team-photo-placeholder" role="img" aria-label="Profile photo placeholder for team member three"><img src="profiles/hellen.jpg" alt="" class="profiles"></div>
+          <h3>HELLEN WAYUA</h3><p>secretary</p>
+        </article>
+        <article class="team-card">
+          <div class="team-photo-placeholder" role="img" aria-label="Profile photo placeholder for team member four"><img src="profiles/mildred.jpg" alt="" class="profiles"></div>
+          <h3>MILDRED</h3><h4>assistant secretary</h4>
+        </article>
+        <article class="team-card">
+          <div class="team-photo-placeholder" role="img" aria-label="Profile photo placeholder for team member five"><img src="profiles/alex.jpg" alt="" class="profiles"></div>
+          <h3>ALEX MACHARIA</h3><h4>Treasurer</h4>
+        </article>
+      </div>
+      <p class="media-note">To add a portrait, replace a placeholder with an image, for example: &lt;img src="member-1.jpg" alt="Name, company role"&gt;.</p>
+    </section>
+
+    <section class="content-section" aria-labelledby="company-video-title">
+      <div class="section-heading">
+        <div><span class="section-kicker">A look behind the scenes</span><h2 id="company-video-title">Our company video.</h2></div>
+        <p>Discover the people and care behind our laundry service.</p>
+      </div>
+      <div class="video-frame">
+        <video id="groupvid" src="group video/536d54dc7527a7f82ee40be9960623c1.mp4" controls></video>
+        <script>
+          const video = document.getElementById('groupvid');
+          video.addEventListener('click', () => {
+            if (video.paused) {
+              video.play();
+            } else {
+              video.pause();
+            }
+          });
+        </script>
+      </div>
+      <p class="media-note">A closer look at the Legion Laundry team and what we do.</p>
+    </section>
+
+    <nav class="page-navigation" aria-label="Page navigation">
+      <a class="button button-secondary" href="HOME-PAGE.HTML"><span aria-hidden="true">&#8592;</span> Back: Home</a>
+      <a class="button" href="SERVICES.HTML">Next: Services <span aria-hidden="true">&#8594;</span></a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand" href="HOME-PAGE.HTML"><span class="brand-mark" aria-hidden="true">LL</span><span>Legion <span class="brand-light">Laundry</span></span></a>
+    <p>Good care, delivered.</p>
+    <address class="footer-contact"><a href="tel:0704766127">Call 0704 766 127</a><a href="CONTACTS.HTML">Contact us</a></address>
+    <a href="ORDERING.HTML">Book a pickup</a>
+  </footer>
+</body>
+</html>
